@@ -1,0 +1,14 @@
+<div class="container">
+  <ul *ngIf="repositoryList">
+    <li *ngFor="let repository of repositoryList">
+
+      <div class="top">
+        <p class="name">{{ repository.name }}</p>
+        <p class="description">{{ repository.description }}</p>
+      </div>
+
+      <p class="creationDate">{{ repository.created_at }}</p>
+
+    </li>
+  </ul>
+</div>

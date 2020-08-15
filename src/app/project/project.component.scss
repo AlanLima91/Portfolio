@@ -1,0 +1,42 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    background: rgb(238, 238, 238);
+    padding: 1em;
+    margin-right: 10px;
+    width: 20%;
+    height: 200px;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+
+    .top {
+      flex-grow: 1;
+      justify-content: space-evenly;
+    }
+
+    p {
+      margin: 0 0 10px;
+    }
+
+    p.name {
+      font-weight: bold;
+      text-transform: capitalize;
+      font-size: 1.2rem;
+    }
+    
+    p.description {
+      font-style: italic;
+      font-size: .9rem;
+    }
+  }
+}
+
+.container {
+  margin-top: 2em;
+}
