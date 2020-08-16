@@ -25,6 +25,7 @@ header {
 
   a.logo {
     font-weight: bold;
+    font-size: 26px;
   }
 
   nav {
@@ -37,9 +38,9 @@ header {
 
       li a {
         padding: 1em;
-         
+
         &:hover {
-          background-color: darken($primary, $amount: 10%);
+          background-color: darken($primary, $amount: 15%);
         }
       }
     }
