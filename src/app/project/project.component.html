@@ -1,14 +1,35 @@
 <div class="container">
+
   <ul *ngIf="repositoryList">
-    <li *ngFor="let repository of repositoryList">
+    <ng-container *ngFor="let repository of repositoryList">
+      <li  *ngIf="repository.archived === false">
 
-      <div class="top">
-        <p class="name">{{ repository.name }}</p>
-        <p class="description">{{ repository.description }}</p>
-      </div>
+        <div class="top">
+          <p class="name">{{ repository.name }}</p>
+          <p class="description">{{ repository.description }}</p>
+        </div>
 
-      <p class="creationDate">{{ repository.created_at }}</p>
+        <p class="creationDate">{{ repository.created_at }}</p>
 
-    </li>
+      </li>
+    </ng-container>
+  </ul>
+
+  <h2 class="title">Archived Project</h2>
+
+  <!-- Archived Project -->
+  <ul *ngIf="repositoryList">
+    <ng-container *ngFor="let repository of repositoryList">
+      <li *ngIf="repository.archived === true">
+
+        <div class="top">
+          <p class="name">{{ repository.name }}</p>
+          <p class="description">{{ repository.description }}</p>
+        </div>
+
+        <p class="creationDate">{{ repository.created_at }}</p>
+
+      </li>
+    </ng-container>
   </ul>
 </div>
